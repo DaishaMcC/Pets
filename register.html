@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header-container">
+            <h1>The fashion Pet</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Register a new pet</h2>
+        <div>
+            <div>
+                <label>Name</label>
+                <input type="text" id="txtName">
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="number" id="txtAge">
+            </div>
+            <div>
+                <label>Gender</label>
+                <input gender="text" id="txtGender">
+            </div>
+            <div>
+                <label>Service</label>
+                <select id="txtService">
+                    <option value="grooming">Grooming</option>
+                    <option value="vaccines">Vaccines</option>
+                    <option value="nails">Nail trimming</option>
+                </select>
+            </div>
+            <div>
+                <label>Breed</label>
+                <select id="txtBreed">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                    <option value="bird">Bird</option>
+                </select>
+            </div>
+            <button onclick="register()">Register</button>
+        </div>
+        <div id="pets">
+
+        </div>
+    </main>
+    <footer>
+        <div class="site-header-container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+            </nav>
+            <div id="salon"></div>
+        </div>
+    </footer>
+    <script src="scripts/register.js"></script>
+</body>
+</html>
