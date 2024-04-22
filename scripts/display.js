@@ -29,6 +29,7 @@ function displayRow(){
                 <td>${pet.gender}</td>
                 <td>${pet.service}</td>
                 <td>${pet.breed}</td>
+                <td>${pet.action}</td>
                 <td>
                     <button class="delete-btn" onclick="deletePet(${i});"><button>
                 <i class="fa-solid fa-trash"></i></td>

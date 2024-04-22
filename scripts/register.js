@@ -20,6 +20,7 @@ function Pet(name,age,gender,service,breed){
     this.gender=gender;
     this.service=service;
     this.breed=breed;
+    this.action=action;
 }
 function isValid(pet){
     let validation=true; // we are fine
@@ -39,8 +40,9 @@ function register(){
     let inputGender = document.getElementById("txtGender").value;
     let inputService = document.getElementById("txtService").value;
     let inputBreed = document.getElementById("txtBreed").value;
+    let inputAction = document.getElementById("txtAction").value;
 
-    let newPet = new Pet(inputName,inputAge,inputGender,inputService,inputBreed);
+    let newPet = new Pet(inputName,inputAge,inputGender,inputService,inputBreed,inputAction);
     console.log(newPet);
 
     if(isValid(newPet)==true){
@@ -61,11 +63,11 @@ function deletePet(petId){
 }
 
 function init(){
-    let pet1 = new Pet("Scooby",99,"Male","Grooming","Dog");
-    let pet2 = new Pet("Scrappy",79,"Male","Vaccines","Dog");
+    let pet1 = new Pet("Scooby",99,"Male","Grooming","Dog","Credit");
+    let pet2 = new Pet("Scrappy",79,"Male","Vaccines","Dog","Debit");
     petSalon.pets.push(pet1,pet2);
-    let pet3 = new Pet("Test",99,"Male","Grooming","Dog");
-    let pet4 = new Pet("Test 2",79,"Male","Nails","Dog");
+    let pet3 = new Pet("Test",99,"Male","Grooming","Dog","Credit");
+    let pet4 = new Pet("Test 2",79,"Male","Nails","Dog","Debit");
     petSalon.pets.push(pet1,pet2,pet3,pet4);
 
     //displayCard();
