@@ -45,19 +45,35 @@ function register(){
 
     if(isValid(newPet)==true){
         petSalon.pets.push(newPet);
+        //displayCard();
         displayCard();
-        console.log(petSalone.pets); // displaying the pets array
+        displayServiceCount();
+        console.log(petSalon.pets);//displaying the pets array
     }
+}
+
+function deletePet(petId){
+    console.log("Deleting pet ..." + petId);
+    document.getElementById(petId).remove();
+    petSalon.pets.splice(petId, 1);
+    displayRow();
+    displayServiceCount();
 }
 
 function init(){
     let pet1 = new Pet("Scooby",99,"Male","Grooming","Dog");
-    let pet2 = new Pet("Scrappy",79,"Male","Vaccine","Dog");
+    let pet2 = new Pet("Scrappy",79,"Male","Vaccines","Dog");
     petSalon.pets.push(pet1,pet2);
-    displayCard();
+    let pet3 = new Pet("Test",99,"Male","Grooming","Dog");
+    let pet4 = new Pet("Test 2",79,"Male","Nails","Dog");
+    petSalon.pets.push(pet1,pet2,pet3,pet4);
+
+    //displayCard();
+    displayRow();
+    displayServiceCount();
 }
 
-window.onload=init;
+window.onload=init; //wait to render the HTML then load the init
 // var fahrenheitTemperature = document.getElementById("salon")
 // fahrenheitTemperature.innerHTML +=
 

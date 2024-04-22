@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootsrtap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="styles/display.css">
     <title>Document</title>
 </head>
 <body>
@@ -17,22 +19,22 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="container">
         <h2>Register a new pet</h2>
-        <div>
-            <div>
+        <div class="form-container">
+            <div class="input-container">
                 <label>Name</label>
                 <input type="text" id="txtName">
             </div>
-            <div>
+            <div class="input-container">
                 <label>Age</label>
                 <input type="number" id="txtAge">
             </div>
-            <div>
+            <div class="input-container">
                 <label>Gender</label>
                 <input gender="text" id="txtGender">
             </div>
-            <div>
+            <div class="input-container">
                 <label>Service</label>
                 <select id="txtService">
                     <option value="grooming">Grooming</option>
@@ -40,7 +42,7 @@
                     <option value="nails">Nail trimming</option>
                 </select>
             </div>
-            <div>
+            <div class="input-container">
                 <label>Breed</label>
                 <select id="txtBreed">
                     <option value="cat">Cat</option>
@@ -48,11 +50,31 @@
                     <option value="bird">Bird</option>
                 </select>
             </div>
-            <button onclick="register()">Register</button>
+            <button class="btn btn-ouline-dark" onclick="register()">Register</button>
+        </div>
+        <div class="info-bar">
+            <label>Grooming ✨🛁:<span id="totalGroomings"> 0 </span> </label>
+            <label>Vaccines 🤍💉:<span id="totalVaccines"> 0 </span> </label>
+            <label>Nails 💅✂️:<span id="totalNails"> 0 </span> </label>
         </div>
         <div id="pets">
 
         </div>
+
+        <h2>Registered pets</h2>
+        <table class="table table-striped">
+            <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Service</th>
+                    </tr>
+            </thead>
+            <tbody id="petRows">
+
+            </tbody>
+        </table>
     </main>
     <footer>
         <div class="site-header-container">
@@ -64,5 +86,6 @@
         </div>
     </footer>
     <script src="scripts/register.js"></script>
+    <script src="scripts/display.js"></script>
 </body>
 </html>
