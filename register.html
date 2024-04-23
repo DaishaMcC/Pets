@@ -16,9 +16,16 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
+                <a href="services.html">Service</a>
             </nav>
         </div>
     </header>
+
+    <div id="notification" class="notification">
+        <span id="closeNotification">&#9747;</span>
+        <p id="notificationText">This is going to be dynamic text!</p>
+    </div>
+
     <main class="container">
         <h2>Register a new pet</h2>
         <div class="form-container">
@@ -52,9 +59,10 @@
             </div>
             <div class="input-container">
                 <label>Action</label>
-                <select id="txtAction"></select>
+                <select id="txtAction">
                 <option value="credit">Credit</option>
                 <option value="debit">Debit</option>
+            </select>
             </div>
             <button class="btn btn-ouline-dark" onclick="register()">Register</button>
         </div>
@@ -62,6 +70,9 @@
             <label>Grooming ✨🛁:<span id="totalGroomings"> 0 </span> </label>
             <label>Vaccines 🤍💉:<span id="totalVaccines"> 0 </span> </label>
             <label>Nails 💅✂️:<span id="totalNails"> 0 </span> </label>
+            <label>Cats:<span id="totalCats"> 0 </span></label>
+            <label>Dogs:<span id="totalDogs"> 0 </span></label>
+            <label>Birds:<span id="totalBirds"> 0 </span></label>
         </div>
         <div id="pets">
 
@@ -69,7 +80,7 @@
 
         <h2>Registered pets</h2>
         <table class="table table-striped">
-            <thead>
+            <thead class="form-container">
                     <tr>
                         <th>Name</th>
                         <th>Age</th>
@@ -89,11 +100,14 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
+                <a href="services.html">Service</a>
             </nav>
             <div id="salon"></div>
         </div>
     </footer>
     <script src="scripts/register.js"></script>
     <script src="scripts/display.js"></script>
+    <script src="scripts/notification.js"></script>
+    <script src="plugins/jquery3.7.1.js"></script>
 </body>
 </html>

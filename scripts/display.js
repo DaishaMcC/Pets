@@ -32,7 +32,7 @@ function displayRow(){
                 <td>${pet.action}</td>
                 <td>
                     <button class="delete-btn" onclick="deletePet(${i});"><button>
-                <i class="fa-solid fa-trash"></i></td>
+                </td>
         </tr>
         `;
     }
@@ -48,23 +48,38 @@ function displayServiceCount(){
     let grooming=0;
     let vaccines=0;
     let nails=0;
+    let cats=0;
+    let dogs=0;
+    let birds=0;
 
     //travel the array
     for(let i=0;i<petSalon.pets.length;i++){
     //get the current pet
-        let pet = petSalone.pets[i];
+        let pet = petSalon.pets[i];
         if(pet.service.toLowerCase()=="grooming"){
             grooming++;
         }
         if(pet.service.toLowerCase()=="vaccines"){
-            grooming++;
+            vaccines++;
         }
         if(pet.service.toLowerCase()=="nails"){
-            grooming++;
+            nails++;
+        }
+        if(pet.service.toLowerCase()=="cats"){
+            cats++;
+        }
+        if(pet.service.toLowerCase()=="dogs"){
+            dogs++;
+        }
+        if(pet.service.toLowerCase()=="birds"){
+            birds++;
         }
         
     }
     document.getElementById("totalGroomings").innerHTML=grooming;
-    document.getElementById("totalVaccines").innerHTML=grooming;
-    document.getElementById("totalNails").innerHTML=grooming;
+    document.getElementById("totalVaccines").innerHTML=vaccines;
+    document.getElementById("totalNails").innerHTML=nails;
+    document.getElementById("totalCats").innerHTML=cats;
+    document.getElementById("totalDogs").innerHTML=dogs;
+    document.getElementById("totalBirds").innerHTML=birds;
 }

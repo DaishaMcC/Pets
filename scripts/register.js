@@ -13,7 +13,7 @@ let petSalon = {
 }
 
 //constructor (blueprint)
-function Pet(name,age,gender,service,breed){
+function Pet(name,age,gender,service,breed,action){
 //attributes on left parameter on the right
     this.name=name;
     this.age=age;
@@ -26,11 +26,11 @@ function isValid(pet){
     let validation=true; // we are fine
     if(pet.name==""){    
     validation=false
-    alert("Please add a name");
+    alert("Please add a name","error");
     }
     if(pet.service==""){
         validation=false
-        alert("Please add a service");
+        alert("Please add a service","error");
     }
     return validation;  //returning the result of the validation
 }
@@ -50,6 +50,7 @@ function register(){
         //displayCard();
         displayCard();
         displayServiceCount();
+        showNotification("The registration was successful","error");
         console.log(petSalon.pets);//displaying the pets array
     }
 }
@@ -60,6 +61,7 @@ function deletePet(petId){
     petSalon.pets.splice(petId, 1);
     displayRow();
     displayServiceCount();
+    showNotification("The registration was deleted","error");
 }
 
 function init(){

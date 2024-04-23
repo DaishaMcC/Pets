@@ -18,3 +18,26 @@ a{
     width: 80%;
     margin: 0 auto;
 }
+.notification{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+#closeNotification{
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#notificationText{
+    margin: 0;
+}
+
+.success{
+    background-color: green;
+}
