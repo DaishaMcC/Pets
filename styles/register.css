@@ -21,16 +21,6 @@
     text-align: right;
 }
 
-.fa-virus{
-    color: rgb(2, 157, 2);
-}
-.fa-trash{
-    color: rgb(161, 161, 161);
-    font-size: 12px;
-    border: 1px solid rgb(i50, 150, 150);
-    padding: 3px;
-    border-radius: 50%;
-}
 .delete-btn{
     border: none;
 }
